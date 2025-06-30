@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Crimson Text', serif;
+  background: #f8f8f8;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.site-header {
+  background: #1d3557;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.intro .lead {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.book-feature {
+  background: #111;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.book-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.book-image img {
+  border-radius: 30px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+.book-info h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(120deg, #457B9D, #1D3557);
+  color: #fff;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: linear-gradient(120deg, #1D3557, #457B9D);
+}
+
+.newsletter {
+  background: #fff;
+  padding: 3rem 0;
+}
+
+#mc_embed_signup {
+  background: #fff;
+  font-family: 'Crimson Text', serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+#mc_embed_signup h2 {
+  margin-top: 0;
+}
+
+.mc-field-group {
+  margin-bottom: 1rem;
+}
+
+.site-footer {
+  background: #1d3557;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  .book-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .book-image img {
+    margin-bottom: 1.5rem;
+  }
+}
