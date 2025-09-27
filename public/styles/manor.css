@@ -1,0 +1,453 @@
+/* Manor Page Styles */
+body {
+    margin: 0;
+    font-family: 'Crimson Text', serif;
+    background: #5c6970;
+    color: #2c1810;
+    line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+    background: #f8f8f8;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.site-header img {
+    height: 50px;
+    width: auto;
+}
+
+/* Main Layout */
+.manor-main {
+    background: #5c6970;
+    min-height: 100vh;
+}
+
+/* Letter Section */
+.letter-section {
+    background: #5c6970;
+    padding: 4rem 2rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-container {
+    display: flex;
+    max-width: 1200px;
+    gap: 4rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.parchment-container {
+    flex: 1;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+}
+
+.parchment {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    padding: 60px 40px;
+    box-shadow: 
+        2px 3px 20px rgba(0,0,0,0.8), 
+        0 0 60px #8a4d0f inset,
+        0 0 20px rgba(138,77,15,0.3);
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(139,69,19,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(160,82,45,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(139,69,19,0.05) 0%, transparent 50%),
+        #fffef0;
+    filter: url(#wavy2);
+    box-sizing: border-box;
+    line-height: 1.6;
+    transform: rotate(-0.5deg);
+}
+
+.parchment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 25%, rgba(139,69,19,0.03) 0%, transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(139,69,19,0.03) 0%, transparent 30%);
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.invisible-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    right: 40px;
+    bottom: 60px;
+    padding: 0;
+    filter: url(#wavy-light);
+    z-index: 2;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.letter-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(139,69,19,0.2);
+}
+
+.author {
+    font-weight: 600;
+    color: #4a3728;
+    font-size: 1.1rem;
+}
+
+.date {
+    color: #6b5847;
+    font-style: italic;
+}
+
+.letter-content {
+    color: #2c1810;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.letter-content p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.portrait {
+    flex: 0 0 300px;
+    margin-top: 6rem;
+}
+
+.portrait img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transform: rotate(0.5deg);
+}
+
+/* Story Section */
+.story-section {
+    background: #5c6970;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.story-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    position: relative;
+}
+
+.parchment-container-second {
+    width: 90%;
+    max-width: 700px;
+    margin-left: 320px; /* Space for runes image */
+    margin-right: 2rem;
+    margin-top: -150px; /* Overlap with first parchment */
+    position: relative;
+    z-index: 2;
+}
+
+/* Second Parchment Sheet */
+.parchment-second {
+    width: 100%;
+    min-height: 500px;
+    padding: 60px 40px;
+    transform: rotate(0.8deg);
+    position: relative;
+}
+
+.story-content {
+    color: #2c1810;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.story-content p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.quote {
+    font-style: italic;
+    color: #4a3728;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+}
+
+.focus {
+    text-align: center;
+    font-weight: 600;
+    color: #4a3728;
+    margin: 1.5rem 0;
+}
+
+.runes-image {
+    position: absolute;
+    left: 2rem;
+    top: 20%;
+    z-index: 1; /* Behind parchments */
+    width: 280px;
+}
+
+.runes-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    transform: rotate(-2deg);
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: #f8f8f8;
+    padding: 4rem 2rem;
+}
+
+.welcome-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.welcome-container h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c1810;
+    font-weight: 400;
+}
+
+.welcome-content {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    column-gap: 4rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.welcome-text p {
+    margin-bottom: 1.5rem;
+    color: #2c1810;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.welcome-image img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.final-text {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 4rem;
+    row-gap: 0rem;
+    align-items: center;
+}
+
+.final-text p {
+    margin-bottom: 1.5rem;
+    grid-column: 2;
+    color: #2c1810;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.final-image {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.final-image img {
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.manor-footer {
+    background: #e8b894;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    color: #2c1810;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .letter-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .portrait {
+        flex: none;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .story-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        position: static;
+    }
+    
+    .parchment-second {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        order: 2;
+        width: 90%;
+        max-width: 800px;
+    }
+    
+    .runes-image {
+        position: static;
+        transform: none;
+        order: 1;
+        max-width: 300px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    
+    .runes-image img {
+        transform: rotate(-1deg) !important; /* Override parallax */
+    }
+}
+
+@media (max-width: 768px) {
+    .letter-section,
+    .story-section,
+    .welcome-section {
+        padding: 2rem 1rem;
+    }
+    
+    .parchment-container,
+    .parchment-container-second {
+        width: 95% !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .parchment,
+    .parchment-second {
+        padding: 2rem 1.5rem;
+        transform: none !important;
+        width: 100%;
+    }
+    
+    .text-overlay {
+        top: 2rem;
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 2rem;
+    }
+    
+    .portrait {
+        z-index: 0; /* Behind parchments */
+        order: 2;
+    }
+    
+    .portrait img,
+    .runes-image img {
+        transform: none !important; /* No rotation or parallax on mobile */
+        z-index: 0;
+    }
+    
+    .runes-image {
+        z-index: 0; /* Behind parchments */
+    }
+    
+    .welcome-container h1 {
+        font-size: 2.2rem;
+    }
+    
+    .welcome-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .final-text {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .final-image {
+        grid-column: 1;
+        grid-row: auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header .container {
+        padding: 0 1rem;
+    }
+    
+    .site-header img {
+        height: 40px;
+    }
+    
+    .letter-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .parchment,
+    .parchment-second {
+        padding: 1.5rem 1rem;
+    }
+    
+    .text-overlay {
+        top: 1.5rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1.5rem;
+    }
+    
+    .welcome-container h1 {
+        font-size: 1.8rem;
+    }
+}
