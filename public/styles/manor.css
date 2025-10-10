@@ -129,7 +129,6 @@ body {
 
 .date {
     color: #6b5847;
-    font-style: italic;
 }
 
 .letter-content {
@@ -141,6 +140,36 @@ body {
 .letter-content p {
     margin-bottom: 1.2rem;
     text-align: justify;
+    font-style: italic;
+}
+
+/* Force Babylonica font with maximum specificity */
+* h2,
+html h2,
+body h2,
+.letter-content h2,
+.text-overlay h2,
+.parchment h2,
+.story-content h2,
+h2.signature,
+body .letter-content h2,
+body .text-overlay h2 {
+    font-family: 'Babylonica', cursive !important;
+    font-size: 2.8rem !important;
+    font-weight: normal !important;
+    margin-bottom: 1.2rem;
+    text-align: right;
+    color: #2c1810;
+    font-style: normal !important;
+}
+
+/* Additional fallback - override all h2 elements within parchment containers */
+.parchment-container h2,
+.parchment-container-second h2 {
+    font-family: 'Babylonica', cursive !important;
+    font-size: 2.8rem !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 .portrait {
