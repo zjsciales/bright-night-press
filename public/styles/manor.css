@@ -28,8 +28,8 @@ body {
 /* Main Layout */
 .manor-main {
     background: 
-        linear-gradient(rgba(92, 105, 112, 0.6), rgba(92, 105, 112, 0.6)),
-        url('../static/old_victorian_bw.jpeg');
+        linear-gradient(rgba(64, 72, 76, 0.85), rgba(36, 41, 44, 0.85)),
+        url('/static/old_victorian_bw.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,6 @@ body {
 
 /* Letter Section */
 .letter-section {
-    background: #5c6970;
     padding: 4rem 2rem;
     min-height: 80vh;
     display: flex;
@@ -160,7 +159,6 @@ body {
 
 /* Story Section */
 .story-section {
-    background: #5c6970;
     padding: 4rem 2rem;
     position: relative;
 }
@@ -319,6 +317,13 @@ body {
 }
 
 /* Mobile Responsiveness */
+/* Tablet specific adjustments */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .parchment-container-second {
+        margin-left: 250px; /* Reduced from 320px for better tablet fit */
+    }
+}
+
 @media (max-width: 1024px) {
     .letter-container {
         flex-direction: column;
@@ -338,7 +343,7 @@ body {
         position: static;
     }
     
-    .parchment-second {
+    .parchment-container-second {
         margin-top: 0;
         margin-left: auto;
         margin-right: auto;
